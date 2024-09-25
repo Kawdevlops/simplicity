@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variaveis no css</title>
+
+    <style>
+
+        /*  Declarar a variavel usando um seletor :root pseudoclase significa raiz, nome da variavel criada deve-se começar com dois -- indiferente do nome 
+        é usado a variavel no css quando á muitas alterações sendo assim eu crio uma variavel enquado nos seletores e quando for mudar muda apenas a variavel*/
+        :root{
+            --cor:blue; 
+            --bordaArredondada: 4px 8px 12px 6px;
+            --corFundo:linear-gradient(pink, red);
+        }
+        /* aqui esta sendo usado a variavel enquanto no :root se cria uma variavel */
+        h1 {
+            color: var(--cor);
+            background: var(--corFundo);
+            border-radius: var(--bordaArredondada);
+        }
+        h2 {
+            border: solid var(--cor) 2px;
+        }
+        p { 
+            text-shadow: var(--cor) 2px 2px 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Usando variaves</h1>
+    <hr>
+    
+    <h2> Front-End</h2>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+   
+    <h2> back-End</h2>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+</body>
+
+</html>
