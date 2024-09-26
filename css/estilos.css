@@ -7,15 +7,19 @@
 
 /* Declaração de variaveis */
 :root {
-    --cor-titulo:#4d4d4d
-    --cor-texto:#333
-    --cor-escura:#000
-    --cor-escura:#fff
-    --cor-intermediaria:#ececec
+    --cor-titulo: #4d4d4d; 
+    --cor-texto: #333;
+    --cor-escura: #000;
+    --cor-clara: #fff;
+    --cor-intermediaria: #ececec;
+}
+
+html {
+    font-size: 16px;
 }
 
 /* reset de alguns elementos */
-body,h1. h2,p,figure,.links-menu {
+body, h1, h2, p, figure, .links-menu {
     margin: 0;
     padding: 0;
 }
@@ -25,17 +29,65 @@ img {
 }
 
 body {
-    font-family: "noto sans" sans-serif;
+    font-family: "noto sans", sans-serif;
     color: var(--cor-texto);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-h1 {
+.titulo {
     font-family: Raleway, sans-serif;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: ;
+    font-size: 1.5rem;
+}
 
+.titulo a {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 0.3rem 1.0rem;
+    border: 4px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.titulo-menu a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+    /* background-color: yellow; */
+}
+.menu a:hover {
+    background-color: var(--cor-intermediaria);
+}
+
+.links-menu {
+    list-style: none;   /*tira as bolinhas da lista*/
+    display: none; /*escoder algo*/
+}
+
+.links-menu a {
+    color: var(--cor-escura);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+/* essa regra só vai fazer sentido com o JS, o . entre uam palavra é porque só funciona a função junta, quando tem espaço entra como descendente*/
+.links-menu.aberto{
+    display: flex;  /* fazer aparecer algo mais todas as vantagens do flex*/
+    flex-direction: column; /* fazer com que os links fiquem dispostos em coluna*/
+    position: absolute; /* para que possamos modificar e colocar em outro lugar onde colocamos left e right 0 os dois justamente para que o texto fique no meio*/
+    left: 0; 
+    right: 0;
+    background-color: var(--cor-clara);
+    /*  */
+}
