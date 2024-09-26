@@ -91,3 +91,14 @@ a {
     background-color: var(--cor-clara);
     /*  */
 }
+
+.destaque {
+    height: 75vh;
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed; /* seletor que manter a imagem fixa e rola a imagem por cima*/
+    color: var(--cor-clara);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
