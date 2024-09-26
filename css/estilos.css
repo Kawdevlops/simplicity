@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* alterando o box model */
 * {
     box-sizing: border-box;
 }
 
+/* Declaração de variaveis */
+:root {
+    --cor-titulo:#4d4d4d
+    --cor-texto:#333
+    --cor-escura:#000
+    --cor-escura:#fff
+    --cor-intermediaria:#ececec
+}
 
 /* reset de alguns elementos */
 body,h1. h2,p,figure,.links-menu {
@@ -13,4 +23,19 @@ body,h1. h2,p,figure,.links-menu {
 img {
     max-width: 100%;
 }
+
+body {
+    font-family: "noto sans" sans-serif;
+    color: var(--cor-texto);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: ;
 

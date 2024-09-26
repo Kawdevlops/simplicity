@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Unidade rem </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        } 
+/* padrão do html é 16px enquanto 1 rem é igual a 16px. Porem pposso declarar o html que é o elemento de rem, posso colocar 20px, 40px ou qualquer outro valor então mesmo se eu colocar 1 rem vai valer o valor que eu declarar, e ao invez de mudar todos os font size, crio um @midiascreen e mudo apenas ele como rem  */
+        h1 {
+            font-size: 48px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+        @media screen and (min-width: 400px){
+            h1 font-size:  60px;
+            h2 font-size: 40px;
+            p font-size: 16px;
+        }
+
+        @media screen and {min-width: 500px;}
+        html {
+            font-size: 1rem;
+        }
+         
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1> Unidade REM (útil para design responsivo) </h1>
+
+    <hr>
+
+    <!--  Unidade conhecidas:
+      pixels (px)
+      porcentagem (%) -->
+
+    <p> REM (R-Eme) é umda medida relativa ao font-size do elemento html</p>
+
+    <h2> Teste 1 </h2>
+    <p> lorem, ipsum dolor.</p>
+
+    <h2> Teste 2 </h2>
+    <p> lorem, ipsum dolor.</p>
+
+    <h2> Teste 3 </h2>
+    <p> lorem, ipsum dolor sit.</p>
+
+
+
+</body>
+
+</html>
