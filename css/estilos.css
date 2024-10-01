@@ -34,7 +34,7 @@ img {
 }
 
 body {
-    font-family: "noto sans", sans-serif;
+    font-family: "Noto sans", sans-serif;
     color: var(--cor-texto);
 }
 
@@ -212,4 +212,17 @@ article address {
     font-weight: bold; /*negrito*/
     align-items: center; /*Centraliza o conteúdo verticalmente.*/
     text-align: center; /*centralizar texto*/
+}
+
+/*  Regra para as demais paginas (produtos serviços e Contato) */
+
+.conteudo-geral{
+    background-color: var(--cor-intermediaria);
+    padding: 0.5rem;
+}
+
+.conteudo-geral h2{
+    padding-left: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px; /*borda entre titulo*/
 }
