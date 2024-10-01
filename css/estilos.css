@@ -7,7 +7,7 @@
 
 /* Declaração de variaveis */
 :root {
-    --cor-titulo: #4d4d4d; 
+    --cor-titulo: #4d4d4d;
     --cor-texto: #333;
     --cor-escura: #000;
     --cor-clara: #fff;
@@ -19,7 +19,12 @@ html {
 }
 
 /* reset de alguns elementos */
-body, h1, h2, p, figure, .links-menu {
+body,
+h1,
+h2,
+p,
+figure,
+.links-menu {
     margin: 0;
     padding: 0;
 }
@@ -56,6 +61,7 @@ a {
     justify-content: space-around;
     align-items: center;
 }
+
 .titulo-menu a {
     color: var(--cor-escura);
     font-size: 1.2rem;
@@ -63,13 +69,16 @@ a {
     display: inline-block;
     /* background-color: yellow; */
 }
+
 .menu a:hover {
     background-color: var(--cor-intermediaria);
 }
 
 .links-menu {
-    list-style: none;   /*tira as bolinhas da lista*/
-    display: none; /*escoder algo*/
+    list-style: none;
+    /*tira as bolinhas da lista*/
+    display: none;
+    /*escoder algo*/
 }
 
 .links-menu a {
@@ -81,12 +90,15 @@ a {
     height: 50px;
 }
 
-/* essa regra só vai fazer sentido com o JS, o . entre uam palavra é porque só funciona a função junta, quando tem espaço entra como descendente*/
-.links-menu.aberto{
-    display: flex;  /* fazer aparecer algo mais todas as vantagens do flex*/
-    flex-direction: column; /* fazer com que os links fiquem dispostos em coluna*/
-    position: absolute; /* para que possamos modificar e colocar em outro lugar onde colocamos left e right 0 os dois justamente para que o texto fique no meio*/
-    left: 0; 
+/* essa regra só vai fazer sentido com o JS, o . entre uam palavra é porque só funciona a função junta, quando tem espaço entra como descendente  "cllase combinada"*/
+.links-menu.aberto {
+    display: flex;
+    /* fazer aparecer algo mais todas as vantagens do flex*/
+    flex-direction: column;
+    /* fazer com que os links fiquem dispostos em coluna*/
+    position: absolute;
+    /* para que possamos modificar e colocar em outro lugar onde colocamos left e right 0 os dois justamente para que o texto fique no meio*/
+    left: 0;
     right: 0;
     background-color: var(--cor-clara);
     /*  */
@@ -95,10 +107,44 @@ a {
 .destaque {
     height: 75vh;
     background-image: url(../imagens/fundo-destaque.jpg);
-    background-attachment: fixed; /* seletor que manter a imagem fixa e rola a imagem por cima*/
+    background-attachment: fixed;
+    /* seletor que manter a imagem fixa e rola a imagem por cima*/
     color: var(--cor-clara);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Etapa 1: Criar regra de animação */
+
+/* key=chave frame=quadro */
+@keyframes animaDestaque {
+
+    /* Dê: (como começa) */
+    from {
+        opacity: 0;
+        transform: translateY(-500px) scale(20%);
+        /*transform efeito de movimento de cima pra baixo, scale tamanho, rotate rotação */
+    }
+
+    /* Para: (como termina) */
+    to {
+        opacity: 1;
+        transform: translateY() scale(1);
+    }
+
+}
+
+/* Etapa de aplicar a animação */
+.destaque h2,
+.detaque p {
+    animation-name: animaDestaque;
+    animation-duration: 1s;
+
+    /* Opçãoes adicionais 
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+ */
+
 }
