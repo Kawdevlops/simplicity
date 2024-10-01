@@ -146,5 +146,66 @@ a {
  animation-iteration-count: infinite;
  animation-direction: alternate;
  */
+}
 
+/* O clamp() no CSS é uma função que define um valor que se ajusta automaticamente dentro de um intervalo, com um valor mínimo, ideal e máximo. Ele garante que o valor fique dentro desses limites, sendo útil para criar layouts responsivos.  font-size : clamp tamanho min, ideial e maximo
+Fora que pode ser usado para outras seletores também*/
+/* .destaque h2{
+    font-size: clamp(3rem, 10vw, 7rem);
+} */
+
+.destaque h2{
+    font-size: clamp(1.5rem, 13vw, 3rem);
+}
+
+article {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo);
+
+}
+
+article p{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+article address {
+    font-style: normal; 
+    font-size: 1.2rem;
+}
+
+.front-end, .historia, .localizacao{
+    text-align: center;
+}
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-size: cover; /*manten a cor num todo*/
+    background-attachment: fixed; /*mantem a imagem fxada*/
+}
+.historia h2 {
+    color: var(--cor-intermediaria);
+    text-shadow: 5px 7px 5px #e6810d80; /*causa o efeito de sombra, os 3 px define a altura largura e espacamento da sombra*/
+}
+.video{
+    margin-bottom: 2rem; /*Adiciona uma margem inferior de 2rem.*/
+    max-width: 700px; /*Limita a largura máxima mesmo que o container permita mais espaço*/
+    width: 100%; /*confidgura a largura*/
+}
+
+.mapa{
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.rodape{
+    background-color: var(--cor-texto);
+    color: var(--cor-clara);
+    height: 30vh; /* define altura da janela de visualização (viewport)*/
+    display: flex; /*Ativa o Flexbox para facilitar a centralização.*/ 
+    justify-content: center; /*Centraliza o conteúdo horizontalmente*/
+    font-weight: bold; /*negrito*/
+    align-items: center; /*Centraliza o conteúdo verticalmente.*/
+    text-align: center; /*centralizar texto*/
 }
