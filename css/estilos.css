@@ -60,7 +60,11 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: sticky; /*manter determinado item fixo*/
+    top: 0;
+    background-color: var(--cor-clara);
 }
+/* testar este código no projeto integrador o fixador */
 
 .titulo-menu a {
     color: var(--cor-escura);
