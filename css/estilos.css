@@ -56,15 +56,28 @@ a {
     border: 4px;
 }
 
+/* cabeçalho/topo "cheio, ou seja, pegando 100% da tela e fixado */
 .topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky; /*manter determinado item fixo*/
     top: 0;
     background-color: var(--cor-clara);
 }
 /* testar este código no projeto integrador o fixador */
+
+/* div com a classe limitador dentro do topoaplicando os ajustes de layout (subcabeçalho */
+.topo .limitador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Classe que será aplicado em algumas partes do site visando criar limites e tamanho */
+.limitador {
+    width: 95vh; /*largura estipulada*/
+    max-width: 1000px; /*o tamanho imposto maximo*/
+    margin: auto;
+
+}
 
 .titulo-menu a {
     color: var(--cor-escura);
@@ -279,10 +292,3 @@ tr:nth-child(even){
     color: var(--cor-clara)
 }
 
-/* Classe que sera aplicado em algumas partes do site visando criar limites e tamanho */
-.limitador{
-    width: 95vh; /*largura*/
-    max-width: 1000px;
-    margin: auto;
-    background-color: yellow;
-}
