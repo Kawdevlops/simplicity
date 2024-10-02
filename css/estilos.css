@@ -292,3 +292,25 @@ tr:nth-child(even){
     color: var(--cor-clara)
 }
 
+.galeria{ /*efeito para o bloco com a imagens*/
+    display: grid; /*cria coluna*/ 
+    gap: 2rem; /*espaço entre as imagens vertical horizontal*/
+    grid-template-columns: repeat(2,1fr); /*deixa a coluna repetida*/
+    justify-content: center; 
+    /* align-items:center; pode usar qualquer align desde que esteja dentro do bloco*/
+    text-align: center;
+    margin-inline: 15rem;
+}
+.galeria img{ /*efeito para cada imagem especifica*/
+    max-width: 100%;
+    /* height: 150px;
+    width: 150px; */
+    object-fit: cover; /*preenche o circulo*/
+    border-radius: 50%; /*deixar redondo*/
+    box-shadow: var(--cor-titulo) 0 0 1rem; /*sombra*/
+    transition: transform 0.9s; /* Transição para o efeito de zoomifca sempre na regra acima do transform*/
+      
+}
+.galeria img:hover{
+    transform: scale(1.8) rotate(-20deg); /*modifica tamanho de imagem melhor doque definir por height e width*/
+}
