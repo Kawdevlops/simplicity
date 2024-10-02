@@ -87,11 +87,11 @@ a {
 
 .links-menu a {
     color: var(--cor-escura);
-    font-weight: bold;
+    font-weight: bold; /*negrito*/
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 50px; /*espaço do link*/
 }
 
 /* essa regra só vai fazer sentido com o JS, o . entre uam palavra é porque só funciona a função junta, quando tem espaço entra como descendente  "cllase combinada"*/
@@ -225,4 +225,56 @@ article address {
     padding-left: 0;
     font-size: 1.8rem;
     border-bottom: solid 1px; /*borda entre titulo*/
+}
+
+/* Regras para tabela */
+/* contorno da tabela */
+table{
+    border:solid 2px var(--cor-escura);
+    width: 80%px;
+    max-width: 600px;
+    margin: auto;
+    border-collapse: collapse; /* para retirar a bordar dupla que fica no th e td tem que vir retirar aqui na tabela */
+}
+
+/* mexer com a lista da tabela */
+caption {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-bottom: 0.4rem; /*espaãmento de cima pra baixo*/
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+}
+
+.text{
+    border: solid 2px;
+    font-weight: bold;   
+}
+
+th, td{
+    border: solid 1.9px var(--cor-texto);
+}
+
+th{
+    background-color: var(--cor-titulo);
+    color: var(--cor-clara);
+    padding: 0.5rem;
+}
+
+td{
+    padding: 0.4rem;
+}
+
+/* pseudo classe de filho para pai colocou o 2 porque o nth é para quando não pega nem o ultimo nem o primeiro*/
+td:nth-child(2){
+    text-align: center;
+}
+/* selecionando os ultimos th e td */
+td:last-child, th:last-child {
+    text-align: right;
+}
+/* selecionando linhar alternadas. Podemos usar even (impares) ou odd (pares) */
+tr:nth-child(even){
+    background-color: var(--cor-titulo);
+    color: var(--cor-clara)
 }
