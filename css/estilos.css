@@ -58,7 +58,7 @@ a {
 
 .topo {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: sticky; /*manter determinado item fixo*/
     top: 0;
@@ -277,4 +277,12 @@ td:last-child, th:last-child {
 tr:nth-child(even){
     background-color: var(--cor-titulo);
     color: var(--cor-clara)
+}
+
+/* Classe que sera aplicado em algumas partes do site visando criar limites e tamanho */
+.limitador{
+    width: 95vh; /*largura*/
+    max-width: 1000px;
+    margin: auto;
+    background-color: yellow;
 }
