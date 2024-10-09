@@ -61,6 +61,7 @@ a {
     position: sticky; /*manter determinado item fixo*/
     top: 0;
     background-color: var(--cor-clara);
+    z-index: 10; /*correção position*/
 }
 /* testar este código no projeto integrador o fixador */
 
@@ -313,4 +314,32 @@ tr:nth-child(even){
 }
 .galeria img:hover{
     transform: scale(1.8) rotate(-20deg); /*modifica tamanho de imagem melhor doque definir por height e width*/
+}
+
+@media screen and ( min-width: 600px) {
+.titulo-menu {display: none;}
+}
+
+/* Exibir os links do menu, para voltar aparecer os links*/
+.links-menu{
+    display: flex;
+}
+ /* ajustando o tamanho do menu (nav) fazendo-o "esticar" aumentando o espaçamento deentro dele*/
+.menu{
+    background-color:yellow;
+    width:60%
+}
+/*Forçando cada item (li) da lista a ter a largura total com isso, redistrbuir e ocupar todos os espaços de dentro menu (nav),*/
+.links-menu li{
+    width:100%;
+}
+
+/* medida rem, usando essa media para poder se adequar ao tamanho exposto no min-width quando coloca dentro da media screen essa ação vai entrar de acordo com oque foi disposto na media*/
+@media screen and { min-width: 1000px;} {
+    html{ font-size: large;}
+}
+
+/* aumentamos a altura da div. limitador contida no topo header*/
+.topo .limitador{
+    height: 100px;
 }
