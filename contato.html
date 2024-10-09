@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Simplicity</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <header class="topo">
+        <!--<header>: Define o cabeçalho de uma página ou de uma seção. Geralmente contém o logo, título, e links de navegação.-->
+
+        <div class="limitador">
+            <h1 class="titulo"><a href="index.html">Simplicity</a></h1>
+            <nav class="menu">
+                <h2 class="titulo-menu"><a href="">Menu &equiv;</a></h2>
+                <ul class="links-menu">
+                    <!-- esse aberto está fazendo a função de aparecer a lista do menu de forma inteirina e não apenas na lateral-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main class="conteudo">
+
+        <article class="conteudo-geral limitador">
+            <h2>Contato</h2>
+<p>
+    Entre em contato conosco para discutir seus projetos e necessidades. Preencha o formulário abaixo e nossa equipe retornará em breve. Estamos ansiosos para trabalhar com você!
+</p>
+           
+
+<p>Atenção: os campos <b>Nome</b>, <b>E-mail</b> e <b>Mensagem</b> são <u>obrigatórios</u>.</p>
+
+<!-- Form get = são enviado os dados na url, expondo as informaçõs, é util para formulario de buscar, para cadastro onde as informações ficam exposta se usa o form post  -->
+    <form action="" method="post">
+    <div>
+         <label for="nome"> Nome: </label>
+         <input required type="text" name="nome" id="nome" placeholder=" Digite o nome completo"> 
+    </div>  
+         
+         <!-- o id é a refenrecia para o for do label, o name é o texto que vai ser exibido para o usuario
+         
+         Label é o que esta fora da caixa de digitalização
+         placeholder: descriçao doque precisa digitar
+         input a criação da caixa
+         -->
+    <div>
+        <label for=" E-mail"> E-mail: </label> 
+        <input required type="email" name="email" id="email">
+    </div>         
+         
+    <div>
+        <label for="nascimento"> Data de nascimento</label>
+        <input type="date" name="nascimento" id="nascimento">
+    </div>
+
+    <div>
+        <label for="telefone">Telefone:</label>
+        <input type="tel" name="telefone" id="telefone">
+    </div>
+
+    <div>
+        <label for="assunto"> Assunto:</label>
+        <select name="assunto" id="assunto">
+            <!-- o select você tem opções e o option e atribui essas opções -->         
+            <option value=""></option> <!--Colocar um option vazio para que não deixe opção e se induza a pessoa a escolher +++ tirar o value++-->
+            <option>Duvidas</option>
+            <option>Elogios</option>
+            <option>Reclamações</option>
+            <option>Outros</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="mensagem"> Mensagem.</label>
+        <!-- textarea sempre começa e termina na mesma linha -->
+        <textarea required name="mensagem" id="mensagem" cols="30" rows="10"></textarea> <!--caixa onde pode comentar, cols colunas e largura e row altura de linhas-->
+    </div>
+
+    <button type="submit">Enviar dados</button>
+    <!-- botão de envio -->
+     
+    </form> 
+        </article>
+    </main>
+
+
+    <footer class="rodape">
+        <p> Site desenvolvido para fins educacionais</p>
+    </footer>
+
+</body>
+
+</html>

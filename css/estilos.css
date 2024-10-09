@@ -326,7 +326,6 @@ tr:nth-child(even){
 }
  /* ajustando o tamanho do menu (nav) fazendo-o "esticar" aumentando o espaçamento deentro dele*/
 .menu{
-    background-color:yellow;
     width:60%
 }
 /*Forçando cada item (li) da lista a ter a largura total com isso, redistrbuir e ocupar todos os espaços de dentro menu (nav),*/
