@@ -316,6 +316,49 @@ tr:nth-child(even){
     transform: scale(1.8) rotate(-20deg); /*modifica tamanho de imagem melhor doque definir por height e width*/
 }
 
+
+/*Regra para formulario*/
+
+form{
+    max-width: 500px;
+    margin: auto;
+}
+
+label{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+form div{
+    margin-bottom: 1rem; /*espaçamento entre as linhas de cima para baixo e em volta, margin-top e somente debaixo para cima*/
+}
+
+input, select, textarea{
+    width: 100%;
+    border: none;
+    padding: 6px;
+    height: 40px;
+    border-radius: 4px;
+}
+textarea{
+    height: auto;
+}
+
+button{
+    border: none;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* focus é apenas para quem usa o table do teclado e o hover o efeito  */
+button:hover, button:focus{
+    background-color: darkblue;
+    cursor: pointer;
+}
 @media screen and ( min-width: 600px) {
 .titulo-menu {display: none;}
 }
@@ -333,8 +376,9 @@ tr:nth-child(even){
     width:100%;
 }
 
+
 /* medida rem, usando essa media para poder se adequar ao tamanho exposto no min-width quando coloca dentro da media screen essa ação vai entrar de acordo com oque foi disposto na media*/
-@media screen and { min-width: 1000px;} {
+@media screen and { min-width: 1000px;} { /*media sempre no final*/
     html{ font-size: large;}
 }
 
@@ -342,3 +386,4 @@ tr:nth-child(even){
 .topo .limitador{
     height: 100px;
 }
+
