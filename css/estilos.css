@@ -108,18 +108,24 @@ a {
     height: 50px; /*espaço do link*/
 }
 
-/* essa regra só vai fazer sentido com o JS, o . entre uam palavra é porque só funciona a função junta, quando tem espaço entra como descendente  "cllase combinada"*/
+/* essa regra só vai fazer sentido com o JS, o . entre uma palavra é porque só funciona a função junta, quando tem espaço entra como descendente  "clase combinada"*/
 .links-menu.aberto {
+    /* Usamos o flex para fazer os links
+    aparecerem e ao mesmo ter acesso a
+    todas as vantagens do flex. */
     display: flex;
-    /* fazer aparecer algo mais todas as vantagens do flex*/
+
+    /* Fazemos com que os links fiquem
+    dispostos como coluna (verticalmente) */
     flex-direction: column;
-    /* fazer com que os links fiquem dispostos em coluna*/
+
+    /* Usamos o position absolute para "soltar" a lista de links na tela e com as propriedades/coordenadas
+    left e right ajustar sua posição em relação às laterais. */
     position: absolute;
-    /* para que possamos modificar e colocar em outro lugar onde colocamos left e right 0 os dois justamente para que o texto fique no meio*/
     left: 0;
     right: 0;
+
     background-color: var(--cor-clara);
-    /*  */
 }
 
 .destaque {
@@ -359,6 +365,22 @@ button:hover, button:focus{
     background-color: darkblue;
     cursor: pointer;
 }
+
+#area-do-cep {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cep { width: 50%; }
+
+#buscar { 
+    width: 49%;
+    padding: 12px;
+}
+
+.campos-restantes { display: none; }
+
+
 @media screen and ( min-width: 600px) {
 .titulo-menu {display: none;}
 }
