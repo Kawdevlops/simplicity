@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* alterando o box model */
+* {
+    box-sizing: border-box;
+}
+
+/* Declaração de variaveis */
+:root {
+    --cor-titulo: #4d4d4d;
+    --cor-texto: #333;
+    --cor-escura: #000;
+    --cor-clara: #fff;
+    --cor-intermediaria: #ececec;
+}
+
+html {
+    font-size: 16px;
+}
+
+/* reset de alguns elementos */
+body,
+h1,
+h2,
+p,
+figure,
+.links-menu {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: "Noto sans", sans-serif;
+    color: var(--cor-texto);
+}
+
+a {
+    text-decoration: none;
+}
+
+.titulo {
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.titulo a {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 0.3rem 1.0rem;
+    border: 4px;
+}
+
+/* cabeçalho/topo "cheio, ou seja, pegando 100% da tela e fixado */
+.topo {
+    position: sticky; /*manter determinado item fixo*/
+    top: 0;
+    background-color: var(--cor-clara);
+    z-index: 10; /*correção position*/
+}
+/* testar este código no projeto integrador o fixador */
+
+/* div com a classe limitador dentro do topoaplicando os ajustes de layout (subcabeçalho */
+.topo .limitador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Classe que será aplicado em algumas partes do site visando criar limites e tamanho */
+.limitador {
+    width: 95vh; /*largura estipulada*/
+    max-width: 1000px; /*o tamanho imposto maximo*/
+    margin: auto;
+
+}
+
+.titulo-menu a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+    /* background-color: yellow; */
+}
+
+.menu a:hover {
+    background-color: var(--cor-intermediaria);
+}
+
+.links-menu {
+    list-style: none;
+    /*tira as bolinhas da lista*/
+    display: none;
+    /*escoder algo*/
+}
+
+.links-menu a {
+    color: var(--cor-escura);
+    font-weight: bold; /*negrito*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /*espaço do link*/
+}
+
+/* essa regra só vai fazer sentido com o JS, o . entre uma palavra é porque só funciona a função junta, quando tem espaço entra como descendente  "clase combinada"*/
+.links-menu.aberto {
+    /* Usamos o flex para fazer os links
+    aparecerem e ao mesmo ter acesso a
+    todas as vantagens do flex. */
+    display: flex;
+
+    /* Fazemos com que os links fiquem
+    dispostos como coluna (verticalmente) */
+    flex-direction: column;
+
+    /* Usamos o position absolute para "soltar" a lista de links na tela e com as propriedades/coordenadas
+    left e right ajustar sua posição em relação às laterais. */
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    background-color: var(--cor-clara);
+}
+
+.destaque {
+    height: 75vh;
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-attachment: fixed;
+    /* seletor que manter a imagem fixa e rola a imagem por cima*/
+    color: var(--cor-clara);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Etapa 1: Criar regra de animação */
+
+/* key=chave frame=quadro */
+@keyframes animaDestaque {
+
+    /* Dê: (como começa) */
+    from {
+        opacity: 0;
+        transform: translateY(-500px) scale(20%);
+        /*transform efeito de movimento de cima pra baixo, scale tamanho, rotate rotação */
+    }
+
+    /* Para: (como termina) */
+    to {
+        opacity: 1;
+        transform: translateY() scale(1);
+    }
+
+}
+
+/* Etapa de aplicar a animação */
+.destaque h2,
+.detaque p {
+    animation-name: animaDestaque;
+    animation-duration: 1s;
+
+    /* Opçãoes adicionais 
+ animation-iteration-count: infinite;
+ animation-direction: alternate;
+ */
+}
+
+/* O clamp() no CSS é uma função que define um valor que se ajusta automaticamente dentro de um intervalo, com um valor mínimo, ideal e máximo. Ele garante que o valor fique dentro desses limites, sendo útil para criar layouts responsivos.  font-size : clamp tamanho min, ideial e maximo
+Fora que pode ser usado para outras seletores também*/
+/* .destaque h2{
+    font-size: clamp(3rem, 10vw, 7rem);
+} */
+
+.destaque h2{
+    font-size: clamp(1.5rem, 13vw, 3rem);
+}
+
+article {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo);
+
+}
+
+article p{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+article address {
+    font-style: normal; 
+    font-size: 1.2rem;
+}
+
+.front-end, .historia, .localizacao{
+    text-align: center;
+}
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-size: cover; /*manten a cor num todo*/
+    background-attachment: fixed; /*mantem a imagem fxada*/
+}
+.historia h2 {
+    color: var(--cor-intermediaria);
+    text-shadow: 5px 7px 5px #e6810d80; /*causa o efeito de sombra, os 3 px define a altura largura e espacamento da sombra*/
+}
+.video{
+    margin-bottom: 2rem; /*Adiciona uma margem inferior de 2rem.*/
+    max-width: 700px; /*Limita a largura máxima mesmo que o container permita mais espaço*/
+    width: 100%; /*confidgura a largura*/
+}
+
+.mapa{
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.rodape{
+    background-color: var(--cor-texto);
+    color: var(--cor-clara);
+    height: 30vh; /* define altura da janela de visualização (viewport)*/
+    display: flex; /*Ativa o Flexbox para facilitar a centralização.*/ 
+    justify-content: center; /*Centraliza o conteúdo horizontalmente*/
+    font-weight: bold; /*negrito*/
+    align-items: center; /*Centraliza o conteúdo verticalmente.*/
+    text-align: center; /*centralizar texto*/
+}
+
+/*  Regra para as demais paginas (produtos serviços e Contato) */
+
+.conteudo-geral{
+    background-color: var(--cor-intermediaria);
+    padding: 0.5rem;
+}
+
+.conteudo-geral h2{
+    padding-left: 0;
+    font-size: 1.8rem;
+    border-bottom: solid 1px; /*borda entre titulo*/
+}
+
+/* Regras para tabela */
+/* contorno da tabela */
+table{
+    border:solid 2px var(--cor-escura);
+    width: 80%px;
+    max-width: 600px;
+    margin: auto;
+    border-collapse: collapse; /* para retirar a bordar dupla que fica no th e td tem que vir retirar aqui na tabela */
+}
+
+/* mexer com a lista da tabela */
+caption {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-bottom: 0.4rem; /*espaãmento de cima pra baixo*/
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+}
+
+.text{
+    border: solid 2px;
+    font-weight: bold;   
+}
+
+th, td{
+    border: solid 1.9px var(--cor-texto);
+}
+
+th{
+    background-color: var(--cor-titulo);
+    color: var(--cor-clara);
+    padding: 0.5rem;
+}
+
+td{
+    padding: 0.4rem;
+}
+
+/* pseudo classe de filho para pai colocou o 2 porque o nth é para quando não pega nem o ultimo nem o primeiro*/
+td:nth-child(2){
+    text-align: center;
+}
+/* selecionando os ultimos th e td */
+td:last-child, th:last-child {
+    text-align: right;
+}
+/* selecionando linhar alternadas. Podemos usar even (impares) ou odd (pares) */
+tr:nth-child(even){
+    background-color: var(--cor-titulo);
+    color: var(--cor-clara)
+}
+
+.galeria{ /*efeito para o bloco com a imagens*/
+    display: grid; /*cria coluna*/ 
+    gap: 2rem; /*espaço entre as imagens vertical horizontal*/
+    grid-template-columns: repeat(2,1fr); /*deixa a coluna repetida*/
+    justify-content: center; 
+    /* align-items:center; pode usar qualquer align desde que esteja dentro do bloco*/
+    text-align: center;
+    margin-inline: 15rem;
+}
+.galeria img{ /*efeito para cada imagem especifica*/
+    max-width: 100%;
+    /* height: 150px;
+    width: 150px; */
+    object-fit: cover; /*preenche o circulo*/
+    border-radius: 50%; /*deixar redondo*/
+    box-shadow: var(--cor-titulo) 0 0 1rem; /*sombra*/
+    transition: transform 0.9s; /* Transição para o efeito de zoomifca sempre na regra acima do transform*/
+      
+}
+.galeria img:hover{
+    transform: scale(1.8) rotate(-20deg); /*modifica tamanho de imagem melhor doque definir por height e width*/
+}
+
+
+/*Regra para formulario*/
+
+form{
+    max-width: 500px;
+    margin: auto;
+}
+
+label{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+form div{
+    margin-bottom: 1rem; /*espaçamento entre as linhas de cima para baixo e em volta, margin-top e somente debaixo para cima*/
+}
+
+input, select, textarea{
+    width: 100%;
+    border: none;
+    padding: 6px;
+    height: 40px;
+    border-radius: 4px;
+}
+textarea{
+    height: auto;
+}
+
+button{
+    border: none;
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* focus é apenas para quem usa o table do teclado e o hover o efeito  */
+button:hover, button:focus{
+    background-color: darkblue;
+    cursor: pointer;
+}
+
+#area-do-cep {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cep { width: 50%; }
+
+#buscar { 
+    width: 49%;
+    padding: 12px;
+}
+
+.campos-restantes { display: none; }
+
+
+@media screen and ( min-width: 600px) {
+.titulo-menu {display: none;}
+}
+
+/* Exibir os links do menu, para voltar aparecer os links*/
+.links-menu{
+    display: flex;
+}
+ /* ajustando o tamanho do menu (nav) fazendo-o "esticar" aumentando o espaçamento deentro dele*/
+.menu{
+    width:60%
+}
+/*Forçando cada item (li) da lista a ter a largura total com isso, redistrbuir e ocupar todos os espaços de dentro menu (nav),*/
+.links-menu li{
+    width:100%;
+}
+
+/* medida rem, usando essa media para poder se adequar ao tamanho exposto no min-width quando coloca dentro da media screen essa ação vai entrar de acordo com oque foi disposto na media*/
+@media screen and { min-width: 1000px;} { /*media sempre no final*/
+    html{ font-size: large;}
+}
+
+/* aumentamos a altura da div. limitador contida no topo header*/
+.topo .limitador{
+    height: 100px;
+}
+
