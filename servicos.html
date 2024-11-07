@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicos - Simplicity</title>
 
-    <link rel="stylesheet" href="/css/estilos.css">
-
+    <link href="./lightbox/css/lightbox.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/css/estilos.css"> <!--Nosso css sempre fica por ultimo-->
 </head>
 
 <body>
@@ -53,7 +54,7 @@
                     </a>
                     
                     <a href="./imagens/desenvolvimento-web-mini.jpg" target="blank">
-                        <img src="./imagens/desenvolvimento-web-mini.jpg" alt=" fig com escita de web">
+                        <img src="./imagens/desenvolvimento-web-mini.jpg" alt=" figura com escita de web">
                     </a>
                     
                     <a href="./imagens/design-grafico-mini.jpg" target="blank">
@@ -83,6 +84,11 @@
     <footer class="rodape">
         <p> Site desenvolvido para fins educacionais</p>
     </footer>
+
+    <!-- Jquery é chamada de biblioteca, porém esse codigo é apenas um cdn, com manipulação, animação e mais, para não precisar baixar (igual bootstrap) Bibliotecas sempre vem primeiro -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="./lightbox/js/lightbox.min.js"></script>
 
     <script src="./js/menu.js"></script>
 </body>
