@@ -9,6 +9,11 @@ const campoEstado = document.querySelector("#estado");
 const botaoBuscar = document.querySelector("#buscar");
 const mensagemStatus = document.querySelector("#status");
 
+//ativação das mascaras para telefone e Cep
+//$ no jquery é a mesma coisa que escrever document.querySelector no js
+
+$(campoTelefone).mask("(00) 0000-0000");
+$(campoCep).mask("00000-000");
 //ouvinte de evento para o botão buscar
 
 botaoBuscar.addEventListener("click", async function(){ // async significa que a função é assíncrona
